@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{ 
+  int  i, *A, j;
+  int max = 0, index = 0;
+
+  A = (int *)malloc(9*sizeof(int));
+  for (i = 0; i < 9; i++)
+  {
+    scanf("%d", &A[i]);
+    if (A[i] > max)
+    {
+      max = A[i];
+      index = i + 1;
+    }
+  }
+  printf("%d\n%d", max, index);
+  free(A);
+  return 0;
+}
