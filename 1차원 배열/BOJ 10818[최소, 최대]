@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+#define NUM 1000000
+
+int main(void)
+{ 
+  int N, i, j;
+  int min = INT_MAX, max = INT_MIN;
+  int *A;
+  A = (int *)malloc(NUM * sizeof(int));
+
+  scanf("%d", &N);
+  
+  for (i = 0; i < N; i++)
+  {
+    scanf("%d", &A[i]);
+    if (A[i] > max)
+    {
+      max = A[i];
+    }
+    if (A[i] < min)
+    {
+      min = A[i];
+    }
+  }
+  printf("%d %d", min, max);
+  free(A);
+  return 0;
+}
+
+
+
+
+
+
+// #include <stdio.h>
+// #include <limits.h>
+// #define NUM 1000000
+
+// int main(void)
+// { 
+//   int N, i, A[NUM], j;
+//   int min = INT_MAX, max = INT_MIN;
+
+//   scanf("%d", &N);
+
+//   for (i = 0; i < N; i++)
+//   {
+//     scanf("%d", &A[i]);
+//     if (A[i] > max)
+//     {
+//       max = A[i];
+//     }
+//     if (A[i] < min)
+//     {
+//       min = A[i];
+//     }
+//   }
+//   printf("%d %d", min, max);
+//   return 0;
+// }
+
