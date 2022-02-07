@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+  int a, b, b1, b2, b3;
+  scanf("%d", &a);
+  scanf("%d", &b);
+  b1 = ((b%100)%10);
+  b2 = ((b%100))/10;
+  b3 = b/100;
+  printf("%d\n%d\n%d\n%d", b1 * a, b2 * a, b3 * a, a * b);
+  return 0;
+}
