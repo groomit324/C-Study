@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void)
+{ 
+  int N, result;
+  int count = 1;
+  scanf("%d", &N);
+  int default_ = N;
+  while(1)
+  {
+    int remain = N % 10;
+    int plus = N / 10 + remain;
+    result = (remain*10) + plus % 10;
+    if (result == default_)
+    {
+      break;
+    }
+    else
+    {
+      count++;
+      N = result;
+    }
+  }
+  printf("%d", count);
+  return 0;
+}
