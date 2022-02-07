@@ -1,0 +1,22 @@
+#include <stdio.h>
+#define N_MAX 10000
+
+int main(void)
+{ 
+
+  int N, X, A[N_MAX], i, j;
+  scanf("%d %d", &N, &X);
+  for (i = 0; i < N; i++)
+  {
+    scanf("%d", &A[i]);
+  }
+  for (j = 0; j < N; j++)
+  {
+    if (X > A[j])
+    {
+      printf("%d ", A[j]);
+    }
+  }
+  
+  return 0;
+}
