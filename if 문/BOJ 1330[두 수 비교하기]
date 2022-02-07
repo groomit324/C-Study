@@ -2,27 +2,19 @@
 
 int main(void)
 {
-  int score;
-  scanf("%d", &score);
-  if (89 < score && score <= 100)
+  int a, b;
+  scanf("%d %d", &a, &b);
+  if (a > b)
   {
-    printf("A");
+    printf(">");
   }
-  else if (80 <= score && score < 90)
+  else if (a < b)
   {
-    printf("B");
-  }
-  else if (70 <= score && score < 80)
-  {
-    printf("C");
-  }
-  else if (60 <= score && score < 70)
-  {
-    printf("D");
+    printf("<");
   }
   else
   {
-    printf("F");
+    printf("==");
   }
   return 0;
 }
